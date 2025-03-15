@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Write Pick - Random Prompt Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #prompt {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Write Pick</h1>
+        <p>Click the button to get a random writing prompt!</p>
+        <button onclick="generatePrompt()">Get Prompt</button>
+        <p id="prompt"></p>
+    </div>
+
+    <script>
+        const prompts = [
+            "Write about a time you got lost.",
+            "Describe your perfect day.",
+            "If you could have dinner with any historical figure, who would it be and why?",
+            "Write a letter to your future self.",
+            "Invent a new holiday and describe how it is celebrated.",
+            "Write a short story that begins with: 'The door creaked open slowly…'",
+            "If you could have one superpower, what would it be?",
+            "Write about your first job.",
+            "Describe a place from your childhood in vivid detail.",
+            "Write about an unforgettable meal you've had."
+        ];
+
+        function generatePrompt() {
+            const randomIndex = Math.floor(Math.random() * prompts.length);
+            document.getElementById("prompt").textContent = prompts[randomIndex];
+        }
+    </script>
+</body>
+</html>
